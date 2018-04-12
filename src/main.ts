@@ -1,22 +1,14 @@
-// polyfill
-import 'promise-polyfill/src/polyfill';
-import 'whatwg-fetch';
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
 
-// start app
-import Vue from 'vue';
-import App from './views/App.vue';
-import router from './router';
-import store from './store';
-import './plugins';
-import './assets/fonticon/iconfont.js';
-import './registerServiceWorker';
-import './scss/_reset.scss';
-import './scss/global.scss';
+Vue.config.productionTip = false
 
-Vue.config.productionTip = false;
-
-new Vue({
-  router,
+/* eslint-disable no-new */
+const init = new Vue({
+  el: '#app',
   store,
-  render: (h) => h(App),
-}).$mount('#app');
+  router,
+  render: h => h(App)
+})

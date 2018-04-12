@@ -1,29 +1,14 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import user from './modules/user';
-import list from './modules/list';
-import filter from './modules/filter';
-import { saveLogin, loginOut, TOKEN } from '@/util/session';
-import { getCookie } from '@/util/cookie';
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
+import user from './modules/user'
 
-const debug = process.env.NODE_ENV !== 'production';
+Vue.use(Vuex)
 
-export default new Vuex.Store({
-  strict: debug,
-  state: {
-    token: getCookie(TOKEN),
-  },
-  mutations: {
-    saveToken(state, token) {
-      state.token = token;
-      saveLogin(token);
-    },
-  },
+const store = new Vuex.Store({
   modules: {
-    user,
-    list,
-    filter,
-  },
-});
+    user
+  }
+})
+
+export default store
