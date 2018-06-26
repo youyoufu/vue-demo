@@ -20,7 +20,7 @@
 
 ``` bash
 # clone this repo
-git clone https://github.com/ws456999/vue-typescript-starter
+git clone https://github.com/ws456999/vue-typescript-sta rter
 
 # Install project dependencies
 npm install

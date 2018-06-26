@@ -1,15 +1,43 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Vue from 'vue';
+import Router from 'vue-router';
+import HelloWorld from '@/views/HelloWorld.vue'
+import Test from '@/views/test.vue'
+// import { hasLogin } from '@/util/session';
 
-Vue.use(Router)
+Vue.use(Router);
 
-export default new Router({
+const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: HelloWorld
+      name: 'HelloWorld',
+      component: HelloWorld,
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: Test,
     }
-  ]
-})
+  ],
+});
+
+router.beforeEach((to, from, next) => {
+  // if (to.matched.some((record) => record.meta.requiredAuth)) {
+  //   // this route requires auth, check if logged in
+  //   // if not, redirect to login page.
+  //   if (!hasLogin()) {
+  //     next({
+  //       path: '/',
+  //       query: { redirect: to.fullPath },
+  //     });
+  //   } else {
+  //     next();
+  //   }
+  // } else {
+    next(); // 确保一定要调用 next()
+  // }
+});
+
+export default router;
+
