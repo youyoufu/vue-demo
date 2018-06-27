@@ -20,10 +20,9 @@
 
 ``` bash
 # clone this repo
-git clone https://github.com/ws456999/vue-typescript-sta rter
 
 # Install project dependencies
-npm install
+npm install 
 
 # serve with hot reload at localhost:8080
 npm run dev
