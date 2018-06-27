@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import HelloWorld from '@/views/HelloWorld.vue'
 import Test from '@/views/test.vue'
+import Login from '@/views/Login.vue'
 // import { hasLogin } from '@/util/session';
 
 Vue.use(Router);
@@ -18,6 +19,11 @@ const router = new Router({
       path: '/test',
       name: 'test',
       component: Test,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
     }
   ],
 });

@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <h2>vue-typescrip-starter</h2>
     <p>mixin 数据 ：{{ testMixinArg }}</p>
-    <p>store 数据 ：{{ info.data }}</p>
+    <p>store 数据 ：{{ info1.data }}</p>
     <RC>111</RC>
   </div>
 </template>
@@ -22,7 +22,7 @@ import { Getter } from 'vuex-class';
   mixins: [TestMixin]
 })
 export default class HelloWorld extends Vue {
-  @Getter info;
+  @Getter info1;
   msg: string = 'Welcome to Your Vue-Typescript App';
 
   mounted() {

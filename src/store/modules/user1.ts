@@ -1,6 +1,6 @@
 let state = {
-  info: {
-    data: 'store data from user'
+  info1: {
+    data: 'store data from user111'
   },
   auth: {}
 }
@@ -8,7 +8,7 @@ let state = {
 const mutations = {}
 
 const getters = {
-  info: state => state.info
+  info1: state => state.info1
 }
 
 export default {
