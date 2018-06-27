@@ -23,7 +23,6 @@ import { Getter } from 'vuex-class';
 })
 export default class HelloWorld extends Vue {
   @Getter info;
-
   msg: string = 'Welcome to Your Vue-Typescript App';
 
   mounted() {
